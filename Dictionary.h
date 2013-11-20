@@ -108,11 +108,11 @@ public:
 			  }
 			  else
 			  {
-				  cout<<"delete it"<<table[key1]->getValue()<<endl;
+				  //cout<<"delete it"<<table[key1]->getValue()<<endl;
 				  table[key1] = NULL;
 			  }
 		  }
-		  cout<<"can not find the word"<<endl;
+		  //cout<<"can not find the word"<<endl;
 	  }
 };
 

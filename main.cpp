@@ -28,13 +28,13 @@ int main()
 		//judge whether the string is a number
 		if (isdigit(input[0]) == 0)
 		{
-			cout<<input<<"   "<<endl;
+			//cout<<input<<"   "<<endl;
 			if (isupper(input[0]) == 1)
 			{
 				input[0] = tolower(input[0]);
-				cout<<input<<endl;
+				//cout<<input<<endl;
 			}
-			//cout<<input<<endl;
+			cout<<input<<endl;
 			dic.add(input);
 		}
 	}
@@ -78,7 +78,7 @@ int main()
 			//change the capital letter into lower case
 			words[0] = tolower(words[0]);
 		}
-		cout<<"here: "<<words<<endl;
+		//cout<<"here: "<<words<<endl;
 		if (dic.lookup(words) != true)
 		{
 			cout<<"word not found: "<<words<<endl;
@@ -107,13 +107,19 @@ int main()
 			//cout<<"~~~~~~~~~~~~~~~~~~delete and replace~~~~~~~~~~~~~~~~~~~~~"<<endl;
 			for (int i = 0; i <= wordSize - 1; i++)
 			{
-				//delete
-				newWords = checker.checkDelete(words, i);
-				if (dic.lookup(newWords) == true)
+				if (i>0 && (words[i] == words[i-1]))
+				{
+					
+				}
+				else
+				{
+					//delete
+					newWords = checker.checkDelete(words, i);
+					if (dic.lookup(newWords) == true)
 					{
 						cout<<"delete        "<<newWords<<endl;
 					}
-
+				}
 				//replace
 				for (int a = 97; a <= 122; a++)
 				{
